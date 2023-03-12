@@ -13,15 +13,20 @@ fields.forEach((field) => {
 const tableBody = document.getElementById("people-list")
 
 let element = document.querySelector("#my-button")
-element.addEventListener("click", () => {
+element.addEventListener("click", (resetEvent) => {
     let tableRow = document.createElement("tr")
     tableBody.appendChild(tableRow)
     let deleteBtn = document.createElement("button")
-    deleteBtn.textContent = "Eliminar"
+    const classAdd = deleteBtn.classList;
+    classAdd.add("btn","btn-outline-info","btn-sm");
+    deleteBtn.textContent = "x"
     for (let prop in personObject) {
         injectTextNodeToTableRow(tableRow, personObject[prop], deleteBtn)
     }
+    resetEvent.target.parentNode.parentNode.reset()
 })
+
+
 
 function injectTextNodeToTableRow(tableRow, text, deleteBtn) {
     let cell = document.createElement("td")

@@ -8,34 +8,39 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
+<body class="bg-dark">
+    <div class="container mt-5">
         <div class="row">
+            <div class="d-flex justify-content-center pb-5">
+                <h1 class="text-info">JS Events First Exercise</h1>
+            </div>
             <div class="col-12 col-md-6">
-                <form action="" class="bg-dark text-white border rounded p-3" id="person-form">
-                    <div class="form-group">
-                    <label for="">Nombre:</label>
+                <form action="" class="bg-info text-white rounded p-3" id="person-form">
+                    <div class="form-group mb-3">
+                    <label class="text-dark" for="">Name:</label>
                     <input type="text" name="name" class="form-control">
                     </div>
-                    <div class="form-group">
-                    <label for="">Apellidos:</label>
+                    <div class="form-group mb-3">
+                    <label class="text-dark" for="">Last Name:</label>
                     <input type="text" name="lastname" class="form-control">
                     </div>
-                    <div class="form-group">
-                    <label for="">Correo:</label>
+                    <div class="form-group mb-3">
+                    <label class="text-dark" for="">Email:</label>
                     <input type="text" name="email" class="form-control">
                     </div>
-                    <button type="button" id="my-button" class="btn btn-outline-info mt-4">GUARDAR</button>
+                    <div class="d-flex justify-content-end">
+                    <button type="button" id="my-button" class="btn btn-dark mt-4">Save</button>
+                </div>
                     </form>
             </div>
             <div class="col-12 col-md-6">
-                <table class="table">
+                <table class="table table-dark">
                     <thead>
                       <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Lastname</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Eliminar</th>
+                        <th class="text-info" scope="col">Name</th>
+                        <th class="text-info" scope="col">Lastname</th>
+                        <th class="text-info" scope="col">Email</th>
+                        <th class="text-info" scope="col">Delete</th>
                       </tr>
                     </thead>
                     <tbody id="people-list">
